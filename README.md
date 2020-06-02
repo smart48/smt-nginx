@@ -2,17 +2,15 @@
 
 Smart48 Nginx Docker Image in progress.
 
-The Laradock Nginx image had the `daemon off` was in nginx config and Dockerfile so removed in the config as suggested by [Kyle Mathew](https://github.com/KyleAMathews/docker-nginx/issues/5)
 
-
-Also had
+If you get the following error:
 
 ```
 2020/06/02 06:26:21 [emerg] 1#1: host not found in upstream "php-fpm:9000" in /etc/nginx/conf.d/upstream.conf:1
 nginx: [emerg] host not found in upstream "php-fpm:9000" in /etc/nginx/conf.d/upstream.conf:1
 ```
 
-on running `docker run --name smt-nginx -p 81:80 -d smart48/smt-nginx:latest`
+on running `docker run --name smt-nginx -p 81:80 -d smart48/smt-nginx:latest` that makes sense as almost all containers depend on the Laravel app PHP FPM image.
 
 so this image was missing the PHP FPM container on a cold `run`.
 
