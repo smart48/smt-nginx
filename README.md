@@ -1,9 +1,8 @@
 # Smart48 Nginx
 
-Smart48 Nginx Docker Image in progress.
+Smart48 Nginx Docker Image to work together with the Laravel app image. Cannot run by itself. Needs PHP FPM up and running as it is linked to it.  
 
-
-If you get the following error:
+So if you get the following error:
 
 ```
 2020/06/02 06:26:21 [emerg] 1#1: host not found in upstream "php-fpm:9000" in /etc/nginx/conf.d/upstream.conf:1
