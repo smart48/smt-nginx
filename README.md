@@ -23,11 +23,15 @@ docker build . -t smart48/smt-nginx
 
 This will build with the tag using our organization's name and name for the image.
 
-you can test it using 
+## Test
+
+You can test the build image using:
 
 ```
 docker run --name smt-nginx -p 81:80 -d smart48/smt-nginx:latest
 ```
+
+as long as the Laravel app image / PHP FPM is running as well to reply to port requests to port 9000.
 
 **NB** `docker container stop $(docker container ls -aq)` to stop all running containers and `docker container rm $(docker container ls -aq)` to remove all.
 
