@@ -20,4 +20,4 @@ RUN touch /var/log/messages
 COPY logrotate/nginx /etc/logrotate.d/
 
 
-# ADD vhost.conf /etc/nginx/conf.d/default.conf
+# Configuration part taken care of at https://github.com/smart48/smt-deploy
